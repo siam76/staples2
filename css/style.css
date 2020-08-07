@@ -1,0 +1,770 @@
+/* ----------------------------------------
+    -=-=-=- Usage -=-=-=-
+-------------------------------------------
+
+//Google Fonts:-
+	
+    1. font-family: 'Poppins', sans-serif;
+    2. font-family: 'Black Ops One', cursive;
+    3.
+
+//Fontawesome Icon:-
+    1. <i class="fas fa-home"></i>
+    2. <i class="fas fa-phone"></i>
+    3. <i class="fas fa-envelope"></i>
+    4. <i class="fas fa-facebook"></i>
+    5. <i class="fas fa-twitter"></i>
+    6. <<i class="fab fa-linkedin-in"></i>
+    7. <i class="fas fa-basketball-ball"></i>
+    8. <i class="fas fa-arrow-left"></i>
+    9. <i class="fas fa-arrow-right"></i>
+
+//Color:-
+    1. #636363;
+    2. #fff; 
+    3. #70C3ED;
+    4. #00A7EB; 
+    5. #464646;
+    6. #d2dae2;
+    7. #d2dae261;
+
+//Plugin:-
+    1.Bootstrap
+    2.Jquery
+    3.Fontawesome
+    4.Wow
+    5.
+
+____________________________________________	
+*/
+
+/* -----------------------------------------
+    -=-=-=-  Google Fonts -=-=-=-
+----------------------------------------- */
+/*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');*/
+
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* -----------------------------------------
+    -=-=-=-  Basic CSS  -=-=-=-
+----------------------------------------- */
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background: #fff;
+    color: #636363;
+    overflow-x: hidden;
+}
+ul, ol{
+    margin: 0;
+    padding: 0;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+p{
+    margin: 0;
+    padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    color: #464646;
+}
+a{
+    color: #636363;
+    transition: .4s;
+}
+a:focus, a:hover{
+    text-decoration: none;
+    outline: none;
+}
+
+/* -----------------------------------------
+    -=-=-=-  Common CSS  -=-=-=-
+----------------------------------------- */
+
+/* -=- Our Button -=- */
+.our-btn{
+    border: 2px solid #70C3ED;
+    display: inline-block;
+    border-radius: 3px;
+    background: #70C3ED;
+    transition: .4s;
+}
+.our-btn a{
+    display: inline-block;
+    background: #70C3ED;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    border-radius: 3px;
+}
+.our-btn:hover{
+    border-color: #00A7EB;
+    background: none;
+}
+.our-btn a:hover{
+    background: #00A7EB;
+    transform: scale(.9);
+}
+
+/* -=- Section Title -=- */
+.sec-title{
+    text-align: center;
+    padding-bottom: 80px;
+}
+.sec-title h2{
+    font-size: 30px;
+    display: inline-block;
+    position: relative;
+}
+.sec-title h2 span{
+    color: #00A7EB;
+}
+.sec-title h2::before,
+.sec-title h2::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #00A7EB;
+}
+.sec-title h2::before{
+    bottom: -15px;
+    width: 80px;
+    height: 3px;
+}
+.sec-title h2::after{
+    bottom: -17px;
+    width: 8px;
+    height: 8px;
+}
+
+.col-20{
+    flex: 0 0 20%;
+    
+}
+
+/* -----------------------------------------
+    -=-=-=-  Header Area CSS  -=-=-=-
+----------------------------------------- */
+
+/* -=- Header Top -=- */
+.sm-header-top{
+    padding: 15px 0;
+    background: #343D46;
+    font-size: 14px;
+}
+.sm-top-content,
+.sm-bottom-content{
+    display: flex;
+    justify-content: space-between;
+}
+.sm-top-left ul,
+.sm-top-right ul,
+.menu ul{
+    display: flex;
+    list-style: none;
+}
+.sm-top-left ul li{
+    margin-right: 25px;
+    color: #d2dae2;
+}
+.sm-top-left ul li i{
+    margin-right: 5px;
+}
+.sm-top-right ul li{
+    margin-left: 15px;
+}
+.sm-top-right ul li a{
+    color: #d2dae2;
+}
+.sm-top-right ul li a:hover{
+    color: #00A7EB;
+}
+
+/* -=- Header Bottom -=- */
+.sm-header-bottom{
+    padding: 40px 0;
+    background: #fff;
+}
+.sm-menu-bar{
+    display: none;
+}
+.close{
+    display: none;
+}
+.menu ul li {
+    margin-left: 30px;
+}
+.menu ul li a{
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.menu ul li a:hover{
+    color: #00A7EB;
+}
+
+/* -----------------------------------------
+    -=-=-=-  Slider Area CSS  -=-=-=-
+----------------------------------------- */
+.sm-slider{
+    position: relative;
+}
+.sm-slider-item{
+    position: relative;
+}
+.sm-slider-item::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(72, 84, 96, .85);
+    z-index: 1;
+ 
+}
+.sm-slider-item .sm-slider-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 3;
+    color: #d2dae2;;
+}
+.sm-slider-item .sm-slider-content h2{
+    font-size: 60px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    color: #d2dae2;;
+    font-family: 'Black Ops One', cursive;
+    font-weight: 800;
+    display: inline-block;
+    position: relative;
+}
+.sm-slider-item .sm-slider-content h2::before,
+.sm-slider-item .sm-slider-content h2::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    width: 50px;
+    height: 15px;
+    opacity: .5;
+    border-radius: 3px 15px 3px 15px;
+}
+.sm-slider-item .sm-slider-content h2::before{
+    left: calc(100% + 30px);
+}
+.sm-slider-item .sm-slider-content h2::after{
+    right: calc(100% + 30px);
+}
+.sm-slider-item .sm-slider-content p{
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.sm-slider-item .sm-slider-content p:last-child{
+    text-transform: capitalize;
+}
+
+/* -=- Owl Carousel Css -=-*/
+
+/* owl Nav*/
+.owl-nav{}
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    outline: none;
+    border: 2px solid #70C3ED;
+    display: inline-block;
+    border-radius: 3px;
+    background: #70C3ED;
+    transition: .4s;
+}
+.owl-carousel .owl-nav button.owl-prev{
+    left: 30px;
+}
+.owl-carousel .owl-nav button.owl-next{
+    right: 30px;
+}
+.owl-carousel .owl-nav button.owl-prev span,
+.owl-carousel .owl-nav button.owl-next span{
+    display: inline-block;
+    background: #70C3ED;
+    color: #d2dae2;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 15px 15px;
+    border-radius: 3px;
+    transition: .2s;
+}
+.owl-carousel .owl-nav button.owl-prev:hover,
+.owl-carousel .owl-nav button.owl-next:hover{
+    border-color: #00A7EB;
+    background: none;
+}
+.owl-carousel .owl-nav button.owl-prev span:hover,
+.owl-carousel .owl-nav button.owl-next span:hover{
+    background: #00A7EB;
+    transform: scale(.9);
+}
+
+/* Owl Dots */
+.owl-dots{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.owl-carousel button.owl-dot {
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 3px;
+    outline: none;
+    border:2px solid #fff;
+    position: relative;
+    display: inline-block;
+    margin: 0 6px;
+    opacity: .3;
+}
+
+.owl-carousel button.owl-dot.active {
+    border:2px solid #00A7EB;
+    opacity: .7;
+}
+
+/*owl carousel Animate Css*/
+.animated  {
+  animation-duration : 300 ms  ;
+  animation-fill-mode : both  ;
+}  
+.owl-animated-out {
+  z-index : 1 
+}
+.owl-animated-in {
+  z-index : 0 
+}
+.fadeOut  {
+  animation-name : fadeOut  ;
+}  
+@-webkit-keyframes  fadeOut  {
+  0% {
+    opacity : 1   ;
+  }  
+  100% {
+    opacity : 0   ;
+  }  
+}
+@keyframes  fadeOut  {
+  0% {
+    opacity : 1   ;
+  }  
+  100% {
+    opacity : 0   ;
+  }  
+}
+
+/* -----------------------------------------
+    -=-=-=-  About Area CSS  -=-=-=-
+----------------------------------------- */
+.sm-about{
+    padding-top: 100px;
+    padding-bottom: 60px;
+    background: #fff;
+}
+.sm-about-content{
+    position: relative;
+    top: calc(50% - 20px);
+    transform: translateY(-50%);
+}
+.sm-about-content .sec-title{
+    text-align: left;
+    margin-bottom: -40px;
+}
+.sm-about-content .sec-title h2::after,
+.sm-about-content .sec-title h2::before{
+    display: none;
+}
+.sm-about-content p{
+    margin-bottom: 35px;
+    padding-right: 40px;
+    text-align: justify;
+}
+.sm-about-content .our-btn{
+    box-shadow: 5px 5px 10px 0px rgb(0 0 0 / 20%);
+}
+.sm-about-img{
+    background: #00A7EB;
+    border-radius: 40px 5px 40px 5px;
+}
+.sm-about-img img{
+    position: relative;
+    top: -40px;
+    left: -40px;
+    border-radius: 40px 5px 40px 5px;
+}
+
+/* -----------------------------------------
+    -=-=-=-  Services Area CSS  -=-=-=-
+----------------------------------------- */
+.sm-services{
+    padding: 100px 0;
+   background:  #d2dae261;
+}
+.sm-serv-item{
+    text-align: center;
+    padding: 30px 20px;
+    position: relative;
+    margin: 40px 0 40px;
+    border-radius: 40px 5px 40px 5px;
+    box-shadow: 5px 5px 10px 0px #00a7eb14;
+}
+.sm-serv-icon{
+    width: 67px;
+    border: 2px solid #70C3ED;
+    display: inline-block;
+    border-radius: 3px;
+    background: #70C3ED;
+    transition: .4s;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.sm-serv-icon i{
+    width: 100%;
+    display: inline-block;
+    background: #70C3ED;
+    color: #fff;
+    font-size: 35px;
+    text-transform: uppercase;
+    padding: 10px 10px;
+    border-radius: 3px;
+    transition: .4s
+}
+.sm-serv-icon:hover{
+    border-color: #00A7EB;
+    background: none;
+}
+.sm-serv-icon i:hover{
+    background: #00A7EB;
+    transform: scale(.8);
+}
+.sm-serv-item h3{
+    margin: 30px 0 25px;
+    font-size: 24px;
+}
+
+/* -----------------------------------------
+    -=-=-=-  Works Plan Area CSS  -=-=-=-
+----------------------------------------- */
+.sm-works{
+    padding: 100px 0;
+    background: #fff;
+}
+.sm-works-plan {
+   padding: 15px 0;
+}
+.sm-works-item{
+    text-align: center;
+}
+.sm-works-item span{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #00A7EB;
+    background: #fff;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+    font-size: 30px;
+    font-weight: 500;
+}
+.sm-works-item span::before{
+    content: "";
+    position: absolute;
+    left: 100%;
+    width: 150px;
+    height: 3px;
+    background: #00A7EB;
+}
+.sm-works-item span::after{
+    content: "";
+    position: absolute;
+    right: -75px;
+    width: 10px;
+    height: 10px;
+    background: #00A7EB;
+}
+.sm-works-plan .col-20:last-child span::before,
+.sm-works-plan .col-20:last-child span::after{
+    display: none;
+}
+.sm-works-item p{
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+/* -----------------------------------------
+    -=-=-=-  Portdolio Area CSS  -=-=-=-
+----------------------------------------- */
+.sm-portfolio{
+    padding: 100px 0;
+    background:  #d2dae261;
+}
+.sm-port-nav ul li{
+        margin: 0px 10px;
+        cursor: pointer;
+}
+.sm-port-nav ul .mixitup-control-active{
+    color: #00A7EB;
+}
+.sm-port-info{
+    margin: 60px 0;
+}
+.sm-port-item{
+    position: relative;
+}
+.sm-port-padding{
+    padding: 2px;
+}
+.sm-port-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 168, 235, .6);
+    transform: scale(0);
+    transition: .4s;
+}
+.sm-overlay-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.sm-overlay-content a{
+    font-size: 40px;
+    color: #fff;
+}
+.sm-port-item:hover .sm-port-overlay{
+    transform: scale(1);
+}
+.sm-port-button{
+    text-align: center;
+}
+.sm-port-button .our-btn a{
+    padding: 15px 100px;
+}
+
+/* -----------------------------------------
+    -=-=-=-  Counter Area CSS  -=-=-=-
+----------------------------------------- */
+.sm-counter{
+    padding: 100px 0;
+    background: #d2dae261;
+}
+.sm-count-item{
+    text-align: center;
+    border-radius: 40px 5px 40px 5px;
+    padding: 30px 0;
+    box-shadow: 5px 5px 10px 0px #00a7eb14;
+}
+.sm-count-icon{
+    margin-bottom: 30px;
+}
+.sm-count-icon i{
+    font-size: 40px;
+    color: #00A7EB;
+}
+.sm-count-text{}
+.sm-count-text span{
+    font-size: 30px;
+    font-weight: 500;
+}
+.sm-count-text p{
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: -5px;
+}
+
+/* -----------------------------------------
+    -=-=-=-  Team Member Area CSS  -=-=-=-
+----------------------------------------- */
+.sm-team{
+    padding: 100px 0;
+}
+.sm-team-info{}
+.sm-single-member{
+    position: relative;
+    border-radius: 40px 5px 40px 5px;
+}
+.sm-single-member img{
+    border-radius: 40px 5px 40px 5px;
+}
+.sm-member-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 168, 235, .4);
+    transform: scale(0);
+    border-radius: 40px 5px 40px 5px;
+    transition: .4s;
+}
+.sm-single-member:hover .sm-member-overlay{
+    transform: scale(1);
+}
+.sm-member-content {
+    text-align: center;
+}
+.sm-member-text{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    transform: translate(-50%,-50%);
+}
+.sm-member-text h4{
+    font-size: 24px;
+    color: #fff;
+    font-weight: 500;
+}
+.sm-member-text h5{
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+    margin-top: 5px;
+}
+.sm-member-icon{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:#343D46;
+    padding: 10px 0;
+    border-radius: 0 0 40px 5px;
+}
+.sm-member-icon ul{
+
+}
+.sm-member-icon ul li{}
+.sm-member-icon ul li a{
+    color: #d2dae2;
+    padding: 0 15px;
+}
+.sm-member-icon ul li a:hover{
+    color: #00A7EB;
+}
+
+
+.sm-contact{
+    padding: 100px 0;
+    background: #d2dae261;
+}
+.sm-contact-info{}
+.sm-contact-top {
+    margin: 30px 0 60px;
+}
+.sm-contact-address{
+    text-align: center;
+}
+.sm-contact-address i{
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #00A7EB;
+}
+.sm-contact-address p {
+    font-weight: 500;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+.sm-contact-address span {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.form-control{
+    background: transparent;
+    color:#636363;
+}
+.form-control:focus{
+    color:#636363;
+    background-color:transparent;
+    border: 2px solid #00a7eb1f;
+    outline:0;
+    box-shadow: 5px 5px 10px 0px #00a7eb14;
+    z-index: 0;
+}
+.sm-submit{
+    border: 2px solid #70C3ED;
+    display: inline-block;
+    border-radius: 3px;
+    background: #70C3ED;
+    transition: .4s;
+}
+.sm-submit input[type=submit]{
+    display: inline-block;
+    background: #70C3ED;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 12px 30px;
+    border: 2px solid #00a7eb1f;
+    border-radius: 3px;
+    outline: none;
+    transition: .4s;
+}
+.sm-submit:hover{
+    border-color: #00A7EB;
+    background: none;
+}
+.sm-submit input[type=submit]:hover{
+    background: #00A7EB;
+    transform: scale(.9);
+}
+.sm-footer{
+    padding: 15px 0;
+    background: #343D46;
+    color: #d2dae2;
+    font-size: 14px;
+}
+.sm-footer p{
+    text-align: center;
+    font-weight: 500;
+}
+.sm-footer p a{
+    color: #d2dae2;
+    color: #d2dae2;
+    font-weight: 600;
+}
+.sm-footer p a:hover{
+    color: #00A7EB;
+}
